@@ -1,0 +1,30 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.outer-container {
+    display: flex;
+    flex-direction: column;
+    border: 3px solid #660a4996;
+    padding: 40px;
+    background-color: #ffffff;
+}
+
+.inner-container {
+    display: flex;
+    flex-direction: row;
+    border: 3px solid #a72889;
+    padding: 50px;
+    background-color: #fee5fc;
+}
+
+.item {
+    margin: 15px;
+    padding: 20px;
+    background-color: #ff97e7;
+    border: 5px solid #891e69;
+}

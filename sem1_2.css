@@ -1,4 +1,3 @@
-
 /* Общие стили */
 body {
     font-family: Arial, sans-serif;
@@ -12,66 +11,44 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 10px;
     padding: 20px;
-    transition: transform 0.3s ease;
 }
 
 .grid-item {
     background-color: #fcd6ed;
     padding: 20px;
-    text-align: center;
-    transition: transform 0.3s ease, background-color 0.3s ease;
     border-radius: 8px;
+    text-align: center;
+    position: relative; /* Необходимо для позиционирования текста */
 }
 
-.grid-item:hover {
-    transform: scale(1.05);
-    background-color: #ef84b9b8;
-    
-}
 .grid-item img {
-    width: 100%; /* Изображение занимает всю ширину блока */
-    height: auto; /* Сохраняет пропорции изображения */
-    border-radius: 8px; /* Закругленные углы для изображений */
-    transition: transform 0.3s ease; /* Плавная анимация */
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
 }
 
 .grid-item img:hover {
-    transform: scale(1.05); /* Увеличение изображения при наведении */
-}
-
-
-/*для текста в картинках*/
-.image-container {
-    position: relative; /* Устанавливаем относительное позиционирование */
-    width: 100%; /* Контейнер занимает всю ширину блока */
-}
-
-.image-container img {
-    width: 100%; /* Изображение занимает всю ширину контейнера */
-    height: auto; /* Сохраняет пропорции изображения */
-    border-radius: 8px; /* Закругленные углы */
+    transform: scale(1.05);
 }
 
 .image-text {
-    position: absolute; /* Абсолютное позиционирование */
-    bottom: 0; /* Размещаем текст внизу контейнера */
+    position: absolute;
+    bottom: 0;
     left: 0;
     width: 100%;
-    color: #740b54; /* Цвет текста */
+    color: #740b54;
     text-align: center;
-    padding: 10px;
-    opacity: 1; /* Показываем текст по умолчанию */
-    transition: opacity 0.3s ease; /* Плавный переход */
-    border-radius: 8px; /* Закругленные углы внизу */
+    padding: 5px;
+    opacity: 0; /* Скрываем текст изначально */
+    transition: opacity 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
 }
 
-
-.image-container:hover .image-text {
+.grid-item:hover .image-text {
     opacity: 1; /* Показываем текст при наведении */
 }
-
-
-
 
 /* Стили для формы */
 .form-container {
@@ -82,7 +59,6 @@ body {
     padding: 20px;
     max-width: 600px;
     margin: 20px auto;
-    transition: transform 0.3s ease;
 }
 
 .form-container label {
@@ -95,11 +71,11 @@ body {
     font-size: 16px;
     transition: transform 0.3s ease, background-color 0.3s ease;
     border-radius: 8px;
+    border: 1px solid #ccc; /* Добавляем рамку для полей ввода */
 }
 
-.form-container input:focus, .form-container button:focus {
-    outline: none;
-    transform: scale(1.02);
+.form-container input:hover, .form-container input:focus {
+    background-color: #ef84b9b8; /* Меняем цвет фона при наведении и клике */
 }
 
 .form-container button:hover {
@@ -114,7 +90,6 @@ body {
     gap: 10px;
     padding: 20px;
     background-color: #fee9f78a;
-    transition: transform 0.3s ease;
 }
 
 .footer-item {
@@ -129,6 +104,3 @@ body {
     transform: scale(1.05);
     background-color: #ef84b9b8;
 }
-
-
-
