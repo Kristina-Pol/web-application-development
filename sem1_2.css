@@ -87,20 +87,76 @@ body {
 .footer-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    padding: 20px;
+    gap: 5px;
+    padding: 10px;
     background-color: #fee9f78a;
 }
 
 .footer-item {
     background-color: #fcd6ed;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
     transition: transform 0.3s ease, background-color 0.3s ease;
     border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .footer-item:hover {
     transform: scale(1.05);
     background-color: #ef84b9b8;
+}
+
+.footer-item h3 {
+    margin-top: 0;
+    font-size: 16px;
+    color: #740b54;
+}
+
+.footer-item p {
+    margin: 5px 0 0 0;
+    font-size: 14px;
+    color: #740b54;
+}
+
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.content-wrapper img {
+    width: 30px; /* Уменьшаем размер изображения */
+    height: auto;
+    margin-right: 10px; /* Добавляем отступ справа от изображения */
+}
+
+.text-content {
+    text-align: left;
+}
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('фото/фон.png'); /* Укажите путь к вашему изображению */
+    background-size: cover; /* Изображение заполняет всю область */
+    background-repeat: no-repeat; /* Изображение не повторяется */
+    background-position: center; /* Изображение центрируется */
+    background-attachment: fixed; /* Изображение фиксируется при прокрутке */
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.7); /* Полупрозрачный белый цвет */
+    z-index: -1;
 }
